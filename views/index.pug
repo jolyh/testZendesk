@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Welcome to #{title}
+  hr
+  button.btn.btn-primary
+    a.btn.btn-primary(role="button", href="/query") Go to query page
+  hr
+  button.btn.btn-primary
+    a.btn.btn-primary(role="button", href="/incremental/") Create Incremental call
+  hr
+  button.btn.btn-primary
+    a.btn.btn-primary(role="button", href="/scheduler") Go to scheduler page
+  br
+

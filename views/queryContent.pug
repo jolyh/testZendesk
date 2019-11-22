@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Query
+  p #{queryContent}
+  br
+  h1 Result
+  div
+    each row in queryResult
+      hr
+      div
+        each value, key in row
+          div
+            span #{key} - 
+            span #{value}

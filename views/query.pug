@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/query/all") Get all tickets
+  br
+  br
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/query/assigned?userid=368349606957") Get all tickets assigned to user Arnaud Joly
+  br
+  br
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/query/organization?orgid=360196266737") Get all tickets from organization Arnaud Joly
+  
+  hr
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/query/add") Create ticket

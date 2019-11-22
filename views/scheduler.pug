@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/scheduler/setup") Setup feed
+  br
+  br
+  button.btn.btn-primary
+    a.btn-primary(role="button", href="/scheduler/stop") Stop scheduled feed

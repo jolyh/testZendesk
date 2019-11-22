@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='./add')
+    div.form-group
+      label(for='Subject') Subject:
+       input#Subject.form-control(type='text', name='subject')
+
+    #form-group    
+      label(for='Description') Description :
+      textarea#Subject.form-control(name='description', required)
+      br
+    #form-group    
+      label Comment :
+      textarea.form-control(name='comment', required)
+      br
+    input.btn.btn-primary(type='submit', style='float: right;', value=Confirm)
+  

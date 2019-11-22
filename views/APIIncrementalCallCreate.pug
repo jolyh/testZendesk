@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='./')
+    div.form-group
+      label(for='Datatype') Datatype:
+      select#datatype.form-control(name='datatype')
+        option(value='tickets') Tickets
+        option(value='ticket_events') Ticket Events
+        option(value='organizations') Organizations
+        option(value='users') Users
+        option(value='ticket_metric_events') Ticket metric events
+      br
+    #form-group    
+      label(for='Start Date') Start Time :
+      input#startDate.form-control(type='date', name='startDate', required)
+      br
+      input#startTime.form-control(type='time', name='startTime', required)
+      br
+    #form-group    
+      label(for='Includes') Includes:
+      input#Metrics.form-control(type="checkbox", name="metrics")
+      | Metrics
+      input#Users.form-control(type="checkbox", name="users")
+      | Users
+      input#Groups.form-control(type="checkbox", name="groups")
+      | Groups
+      br
+    input.btn.btn-primary(type='submit', style='float: right;', value=Confirm)
+  

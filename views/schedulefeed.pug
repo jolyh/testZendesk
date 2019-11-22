@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 Setup feed of Data
+  form(method='POST', action='./setup')
+    div.form-group
+      label(for='Datatype') Datatype:
+      select#datatype.form-control(name='datatype')
+        option(value='tickets') Tickets
+        option(value='ticket_events') Ticket Events
+        option(value='organizations') Organizations
+        option(value='users') Users
+        option(value='ticket_metric_events') Ticket metric events
+      hr
+    #form-group    
+      label(for='Scheduled for') Scheduled for :
+      br
+      | Month (0-11)
+      input#startDate.form-control(type='number' min=0, max=11, name='month') 
+      | Day (1-31)
+      br
+      input#startDate.form-control(type='number', min=1, max=31, name='date') 
+      | Hour (0-59)
+      br
+      input#startDate.form-control(type='number', min=0, max=59, name='hour') 
+      | Minute (0-59)
+      br
+      input#startDate.form-control(type='number', min=0, max=59, name='minute')
+      hr
+    #form-group    
+      label(for='Includes') Includes:
+      input#Metrics.form-control(type="checkbox", name="metrics")
+      | Metrics
+      input#Users.form-control(type="checkbox", name="users")
+      | Users
+      input#Groups.form-control(type="checkbox", name="groups")
+      | Groups
+      br
+    input.btn.btn-primary(type='submit', style='float: right;', value=Confirm)
+  
